@@ -80,7 +80,7 @@
 
     .btn-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); /* Reduced from 200px */
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
       gap: 1.2rem;
       width: 100%;
       margin-top: 2rem;
@@ -88,19 +88,19 @@
 
     .btn {
       position: relative;
-      padding: 0.84em 1.05em; /* Reduced by 30% from 1.2em 1.5em */
+      padding: 0.84em 1.05em;
       background: transparent;
       border-radius: 12px;
       border: none;
       color: var(--text);
-      font-size: 0.9rem; /* Slightly smaller font */
+      font-size: 0.9rem;
       font-family: 'Poppins', sans-serif;
       font-weight: 500;
       text-transform: uppercase;
       letter-spacing: 1px;
       cursor: pointer;
       overflow: hidden;
-      transition: all 0.2s cubic-bezier(0.23, 1, 0.32, 1); /* Reduced from 0.4s */
+      transition: all 0.2s cubic-bezier(0.23, 1, 0.32, 1);
       z-index: 1;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
       backdrop-filter: blur(5px);
@@ -117,7 +117,7 @@
       background: linear-gradient(135deg, var(--primary), var(--primary-dark));
       z-index: -1;
       clip-path: circle(0% at 50% 50%);
-      transition: clip-path 0.3s cubic-bezier(0.65, 0, 0.35, 1); /* Reduced from 0.6s */
+      transition: clip-path 0.3s cubic-bezier(0.65, 0, 0.35, 1);
     }
 
     .btn:hover::before {
@@ -126,8 +126,8 @@
 
     .btn:hover {
       color: var(--secondary);
-      transform: translateY(-1.5px); /* Reduced from -3px */
-      box-shadow: 0 4px 12.5px rgba(0, 230, 184, 0.3); /* Reduced from 8px 25px */
+      transform: translateY(-1.5px);
+      box-shadow: 0 4px 12.5px rgba(0, 230, 184, 0.3);
     }
 
     /* Click effect - light blue background */
@@ -238,7 +238,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: all 0.3s ease;
+      transition: all 0.15s ease; /* Reduced from 0.3s by 50% */
       position: relative;
       overflow: hidden;
     }
@@ -254,7 +254,7 @@
       z-index: -1;
       border-radius: 50%;
       transform: scale(0);
-      transition: transform 0.3s ease;
+      transition: transform 0.15s ease; /* Reduced from 0.3s by 50% */
     }
 
     .control-btn:hover::before {
@@ -263,7 +263,7 @@
 
     .control-btn:hover {
       color: var(--secondary);
-      transform: translateY(-2px);
+      transform: translateY(-1px); /* Reduced from -2px by 50% */
     }
 
     .play-pause {
@@ -273,11 +273,12 @@
       background: linear-gradient(135deg, var(--primary), var(--primary-dark));
       color: var(--secondary);
       box-shadow: 0 4px 15px rgba(0, 230, 184, 0.3);
+      transition: all 0.15s ease; /* Reduced from 0.3s by 50% */
     }
 
     .play-pause:hover {
-      transform: scale(1.05);
-      box-shadow: 0 6px 20px rgba(0, 230, 184, 0.4);
+      transform: scale(1.025); /* Reduced from 1.05 by 50% */
+      box-shadow: 0 3px 10px rgba(0, 230, 184, 0.4); /* Reduced from 6px 20px by 50% */
     }
 
     .volume-control {
@@ -309,12 +310,12 @@
       border-radius: 50%;
       background: var(--primary);
       cursor: pointer;
-      transition: all 0.2s ease;
+      transition: all 0.1s ease; /* Reduced from 0.2s by 50% */
     }
 
     .volume-slider::-webkit-slider-thumb:hover {
       background: var(--primary-dark);
-      transform: scale(1.2);
+      transform: scale(1.1); /* Reduced from 1.2 by 50% */
     }
 
     .volume-slider::-moz-range-thumb {
@@ -324,12 +325,12 @@
       background: var(--primary);
       cursor: pointer;
       border: none;
-      transition: all 0.2s ease;
+      transition: all 0.1s ease; /* Reduced from 0.2s by 50% */
     }
 
     .volume-slider::-moz-range-thumb:hover {
       background: var(--primary-dark);
-      transform: scale(1.2);
+      transform: scale(1.1); /* Reduced from 1.2 by 50% */
     }
 
     .audio-wave {
@@ -345,7 +346,7 @@
       width: 3px;
       background: var(--primary);
       border-radius: 2px;
-      animation: wave 1.2s infinite ease-in-out;
+      animation: wave 0.6s infinite ease-in-out; /* Reduced from 1.2s by 50% */
     }
 
     @keyframes wave {
@@ -353,12 +354,12 @@
       50% { height: 20px; }
     }
 
-    .wave-bar:nth-child(2) { animation-delay: 0.15s; }
-    .wave-bar:nth-child(3) { animation-delay: 0.3s; }
-    .wave-bar:nth-child(4) { animation-delay: 0.45s; }
-    .wave-bar:nth-child(5) { animation-delay: 0.6s; }
-    .wave-bar:nth-child(6) { animation-delay: 0.75s; }
-    .wave-bar:nth-child(7) { animation-delay: 0.9s; }
+    .wave-bar:nth-child(2) { animation-delay: 0.075s; } /* Reduced from 0.15s by 50% */
+    .wave-bar:nth-child(3) { animation-delay: 0.15s; } /* Reduced from 0.3s by 50% */
+    .wave-bar:nth-child(4) { animation-delay: 0.225s; } /* Reduced from 0.45s by 50% */
+    .wave-bar:nth-child(5) { animation-delay: 0.3s; } /* Reduced from 0.6s by 50% */
+    .wave-bar:nth-child(6) { animation-delay: 0.375s; } /* Reduced from 0.75s by 50% */
+    .wave-bar:nth-child(7) { animation-delay: 0.45s; } /* Reduced from 0.9s by 50% */
 
     .footer {
       margin-top: 3rem;
@@ -410,7 +411,7 @@
     <div id="audio-player">
       <div class="audio-container">
         <div class="audio-title">
-          <i class="fas fa-music"></i> Background Music
+          <i class="fas fa-music"></i> <span id="song-title">Background Music</span>
         </div>
         
         <div class="audio-wave">
@@ -434,13 +435,19 @@
           </div>
           
           <div class="control-buttons">
-            <button class="control-btn" id="rewind">
+            <button class="control-btn" id="prev">
               <i class="fas fa-backward-step"></i>
+            </button>
+            <button class="control-btn" id="rewind">
+              <i class="fas fa-backward"></i>
             </button>
             <button class="control-btn play-pause" id="play-pause">
               <i class="fas fa-play" id="play-icon"></i>
             </button>
             <button class="control-btn" id="forward">
+              <i class="fas fa-forward"></i>
+            </button>
+            <button class="control-btn" id="next">
               <i class="fas fa-forward-step"></i>
             </button>
           </div>
@@ -452,8 +459,8 @@
         </div>
       </div>
       
-      <audio id="audio-element" loop>
-        <source src="https://files.catbox.moe/kxdej4.m4a,https://files.catbox.moe/0aoqzx.mp3,https://files.catbox.moe/d5yxdu.mp3,https://files.catbox.moe/zn5rcs.mp3" type="audio/mpeg">
+      <audio id="audio-element">
+        <source src="" type="audio/mpeg">
         Your browser does not support the audio element.
       </audio>
     </div>
@@ -500,12 +507,50 @@
     const volumeSlider = document.getElementById('volume');
     const rewindBtn = document.getElementById('rewind');
     const forwardBtn = document.getElementById('forward');
+    const prevBtn = document.getElementById('prev');
+    const nextBtn = document.getElementById('next');
+    const songTitleEl = document.getElementById('song-title');
     const waveBars = document.querySelectorAll('.wave-bar');
+
+    // Playlist of songs
+    const playlist = [
+      { title: "Song 1", src: "https://files.catbox.moe/kxdej4.m4a" },
+      { title: "Song 2", src: "https://files.catbox.moe/0aoqzx.mp3" },
+      { title: "Song 3", src: "https://files.catbox.moe/d5yxdu.mp3" },
+      { title: "Song 4", src: "https://files.catbox.moe/zn5rcs.mp3" }
+    ];
+    
+    let currentSongIndex = 0;
+
+    // Load a song
+    function loadSong(index) {
+      if (index < 0) index = playlist.length - 1;
+      if (index >= playlist.length) index = 0;
+      
+      currentSongIndex = index;
+      const song = playlist[currentSongIndex];
+      
+      audio.src = song.src;
+      songTitleEl.textContent = song.title;
+      
+      // Reset progress bar and time display
+      progressBar.style.width = '0%';
+      currentTimeEl.textContent = '0:00';
+      durationEl.textContent = '0:00';
+      
+      // If a song was playing, continue playing the new one
+      const wasPlaying = !audio.paused;
+      audio.load();
+      
+      if (wasPlaying) {
+        audio.play().catch(e => console.log("Playback failed:", e));
+      }
+    }
 
     // Play/Pause functionality
     function togglePlayPause() {
       if (audio.paused) {
-        audio.play();
+        audio.play().catch(e => console.log("Playback failed:", e));
         playIcon.classList.remove('fa-play');
         playIcon.classList.add('fa-pause');
         playPauseBtn.setAttribute('aria-label', 'Pause');
@@ -579,20 +624,31 @@
       audio.currentTime = Math.min(audio.duration, audio.currentTime + 10);
     }
 
+    // Previous song
+    function prevSong() {
+      loadSong(currentSongIndex - 1);
+    }
+
+    // Next song
+    function nextSong() {
+      loadSong(currentSongIndex + 1);
+    }
+
     // Event listeners for audio player
     playPauseBtn.addEventListener('click', togglePlayPause);
     audio.addEventListener('timeupdate', updateProgress);
-    audio.addEventListener('ended', () => {
-      playIcon.classList.remove('fa-pause');
-      playIcon.classList.add('fa-play');
-      playPauseBtn.setAttribute('aria-label', 'Play');
-      waveBars.forEach(bar => bar.style.animationPlayState = 'paused');
-    });
+    audio.addEventListener('ended', nextSong);
+    audio.addEventListener('loadedmetadata', updateProgress);
     progressContainer.addEventListener('click', setProgress);
     volumeSlider.addEventListener('input', setVolume);
     rewindBtn.addEventListener('click', rewind);
     forwardBtn.addEventListener('click', forward);
+    prevBtn.addEventListener('click', prevSong);
+    nextBtn.addEventListener('click', nextSong);
 
+    // Initialize player with first song
+    loadSong(0);
+    
     // Initialize volume
     setVolume();
     
